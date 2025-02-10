@@ -28,7 +28,7 @@ const AchievementPage = () => {
       const token = localStorage.getItem('token');
       try {
         // 사용자 ID를 기반으로 업적 정보를 서버에서 가져오기
-        const response = await fetch(`http://192.168.34.14:8080/api/achievements/${userId}`, {
+        const response = await fetch(`http://localhost:8080/api/achievements/${userId}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json', // 요청 타입

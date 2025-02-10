@@ -15,6 +15,7 @@ public class Ranking {
 
     @Id // 기본 키를 나타내는 어노테이션
     @GeneratedValue(strategy = GenerationType.IDENTITY) // 자동 증가 방식의 기본 키 생성 전략
+    @Column(name = "user_id")
     private Long id; // 기본 키 필드
 
     @OneToOne

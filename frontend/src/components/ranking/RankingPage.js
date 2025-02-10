@@ -11,7 +11,7 @@ const RankingPage = () => {
   useEffect(() => {
     const fetchRankings = async () => {
       try {
-        const response = await fetch('http://192.168.34.14:8080/api/rankings');
+        const response = await fetch('http://localhost:8080/api/rankings');
 
         if (!response.ok) {
           throw new Error('네트워크 응답이 좋지 않습니다.');

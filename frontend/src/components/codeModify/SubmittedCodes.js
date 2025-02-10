@@ -51,7 +51,7 @@ function SubmittedCodes() {
       const userIdFromToken = decodedToken.userId;
 
       if (userIdFromToken) {
-        fetch(`http://192.168.34.14:8080/api/code/submissions?userId=${userIdFromToken}`, {
+        fetch(`http://localhost:8080/api/code/submissions?userId=${userIdFromToken}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -100,7 +100,7 @@ function SubmittedCodes() {
     }
 
     try {
-      const response = await fetch('http://192.168.34.14:8888/api/code/revise', {
+      const response = await fetch('http://localhost:8080/api/code/revise', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
@@ -146,7 +146,7 @@ function SubmittedCodes() {
     // AI 피드백 로딩 시작
     setIsLoadingFeedback(true);
     try {
-      const response = await fetch('http://192.168.34.14:8080/api/code/feedback', {
+      const response = await fetch('http://localhost:8080/api/code/feedback', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

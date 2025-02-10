@@ -51,7 +51,7 @@ const ProfileEdit = () => {
       formBody.append("phoneNum", formData.phoneNum);
 
       // 사용자 정보 업데이트 요청
-      const response = await fetch(`http://192.168.34.14:8080/api/auth/update/${userId}`, {
+      const response = await fetch(`http://localhost:8080/api/auth/update/${userId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',

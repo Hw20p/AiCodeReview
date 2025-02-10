@@ -2,6 +2,7 @@ package com.aicodegem.model;
 
 import java.util.List;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,6 +16,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // MySQL에서 자동 생성되는 기본 키
+    @Column(name = "user_id")
     private Long id; // id 타입을 Long으로 변경
 
     private String username;
